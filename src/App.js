@@ -4,8 +4,9 @@ import { Alert1 } from './components/Alert1';
 import { Container1 } from './components/Container1';
 import { Accordin1 } from './components/Accordin1';
 
-import {Navbar,Container} from 'react-bootstrap';
+import {Navbar,Container,Row,Col} from 'react-bootstrap';
 import { Counter } from './components/Counter';
+import { Register } from './components/Register';
 
 
 
@@ -25,10 +26,18 @@ function App() {
         <Navbar.Brand href="/">React Bootrap</Navbar.Brand>
 
      </Container>
-
 </Navbar>
+<Container className="mt-3">
+
+<Row>
+
 <Counter/>
 
+<Register/>
+</Row>
+
+        
+</Container>
     </>
     </div>
   );
