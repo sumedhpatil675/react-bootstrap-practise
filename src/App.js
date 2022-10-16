@@ -40,7 +40,7 @@ function App() {
 
 </Row>
 
-<Row>
+<Row className="mt-4">
 <UserList/>
 
 

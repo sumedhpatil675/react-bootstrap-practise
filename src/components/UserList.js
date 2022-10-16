@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import { Table,Col } from 'react-bootstrap'
 import { UserService } from './UserService'
 
 export const UserList = () => {
@@ -11,8 +12,8 @@ export const UserList = () => {
     {
         UserService.getAllUsers().then((response)=>
         {
-            setState({
-                ...state,
+            setTable({
+                ...table,
                 tableData:response.data,
             })
 
@@ -22,12 +23,46 @@ export const UserList = () => {
         })
     },[])
 
-
+console.log(table)
   return (
     <div>
 
-User List
-{state.table}
+
+<Col>
+       <Table striped bordered hover className="">
+        <thead>
+        <tr>
+                <th>SNO</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Website</th>
+                <th>Company</th>
+                <th>Location</th>
+              </tr>
+        </thead>
+        <tbody>
+
+            {table.tableData.length>0 && table.tableData.map(
+                user=>{
+                    return(
+                        <tr key={user.id}>
+                            <td>{user.id}</td>
+                            <td>{user.name}</td>
+                            <td>{user.email}</td>                            
+                            <td>{user.website}</td>
+                            <td>{user.company.name}</td>
+                            <td>{user.address.city}</td>
+
+                        </tr>
+                        )
+                }
+            )}
+        </tbody>
+
+             
+
+       </Table>
+</Col>
 
 
     </div>
