@@ -7,6 +7,7 @@ import { Accordin1 } from './components/Accordin1';
 import {Navbar,Container,Row,Col} from 'react-bootstrap';
 import { Counter } from './components/Counter';
 import { Register } from './components/Register';
+import { UserList } from './components/UserList';
 
 
 
@@ -40,8 +41,9 @@ function App() {
 </Row>
 
 <Row>
+<UserList/>
 
-  
+
 </Row>
 
 
