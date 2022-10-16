@@ -33,8 +33,14 @@ function App() {
 
 <Counter/>
 
+
 <Register/>
+
+
 </Row>
+
+
+
 
         
 </Container>
