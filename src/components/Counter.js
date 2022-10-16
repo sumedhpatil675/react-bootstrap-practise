@@ -26,11 +26,7 @@ export const Counter = () => {
 
 
     return (
-    <div>
-
-        <Container className="mt-3">
-
-            <Row>
+   
 
             <Col xs="4" >
             
@@ -43,15 +39,9 @@ export const Counter = () => {
                     </Card.Body>
             
             </Card>            
-            </Col>
-
-            </Row>
-
+         
+</Col>
 
 
-        </Container>
-
-
-    </div>
   )
 }
